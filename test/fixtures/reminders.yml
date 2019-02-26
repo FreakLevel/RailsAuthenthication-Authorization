@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  message: MyString
+  datetime: 2019-02-26 18:33:41
+  owner: 
+
+two:
+  title: MyString
+  message: MyString
+  datetime: 2019-02-26 18:33:41
+  owner: 
