@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class RemindersController < ApplicationController # :nodoc:
+  before_action :authenticate_user!
 
   def index
   end
