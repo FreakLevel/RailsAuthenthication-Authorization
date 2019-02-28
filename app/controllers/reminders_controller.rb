@@ -4,8 +4,7 @@ class RemindersController < ApplicationController # :nodoc:
   before_action :authenticate_user!
 
   def index
-    reminders = current_user.reminder.all
-    reminders.as_json
+    @reminders = current_user.reminder.all
   end
 
   def new
@@ -31,6 +30,9 @@ class RemindersController < ApplicationController # :nodoc:
   end
 
   def delete
+    reminder = current_user.reminder.find_by(id: params[:id])
+    reminder.destroy if !reminder.nil?
+    redirect_to reminders_index_path
   end
 
   private

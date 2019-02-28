@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post 'reminders/create', to: 'reminders#create', as: 'reminders_create'
   get 'reminders/show'
   get 'reminders/edit'
+  delete 'reminders/:id', to: 'reminders#delete', as: 'reminders_delete'
 end
