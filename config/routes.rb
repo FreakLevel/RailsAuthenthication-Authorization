@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'reminders#index'
   get 'reminders/index'
-  get 'reminders/new'
+  get 'reminders/new', as: 'reminders_new'
+  post 'reminders/create', to: 'reminders#create', as: 'reminders_create'
   get 'reminders/show'
   get 'reminders/edit'
 end

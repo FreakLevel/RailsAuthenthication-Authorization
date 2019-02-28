@@ -1,2 +1,11 @@
 <h1>Reminders#new</h1>
 <p>Find me in app/views/reminders/new.html.erb</p>
+<%= form_tag(reminders_create_path, method: 'post') do %>
+  <%= label_tag(:title, 'Title') %>
+  <%= text_field_tag(:title) %>
+  <%= label_tag(:message, 'Message') %>
+  <%= text_area_tag(:message, '', size: '24x6') %>
+  <%= label_tag(:datetime, 'Date') %>
+  <%= datetime_select('reminder', 'dt', default: DateTime.now, use_two_digit_numbers: true) %>
+  <%= submit_tag('Create') %>
+<% end %>

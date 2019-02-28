@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-class Reminder < AnpplicationRecord # :nodoc:
-  attr_accessor :title, :message, :datetime
-
-  validates :title, presence: true
+class Reminder < ApplicationRecord # :nodoc:
+  validates_presence_of :title
 
   belongs_to :user
 end
