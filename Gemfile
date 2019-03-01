@@ -72,5 +72,7 @@ gem 'cancancan', '~> 2.0'
 
 # Omniauth
 gem 'omniauth'
+# Omniauth quickbooks
+gem 'omniauth-quickbooks-oauth2'
 
 gem 'figaro'
