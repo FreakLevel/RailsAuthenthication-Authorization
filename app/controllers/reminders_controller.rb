@@ -31,7 +31,7 @@ class RemindersController < ApplicationController # :nodoc:
 
   def delete
     reminder = current_user.reminder.find_by(id: params[:id])
-    reminder.destroy if !reminder.nil?
+    reminder&.destroy
     redirect_to reminders_index_path
   end
 
